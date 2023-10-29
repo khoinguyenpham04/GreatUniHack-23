@@ -1,0 +1,40 @@
+
+.fake-cursor1 {
+    width: 15px;
+    height: 23px;
+   
+    background-image: url('cursor_PNG102.png');
+    background-size: 15px 23px; 
+    position: absolute;
+    pointer-events: none; /* Ensures the fake cursor doesn't interfere with real mouse events */
+}
+
+.fake-cursor2 {
+    width: 15px;
+    height: 23px;
+   
+    background-image: url('cursor_PNG102.png');
+    background-size: 15px 23px; 
+    position: absolute;
+    pointer-events: none; /* Ensures the fake cursor doesn't interfere with real mouse events */
+}
+
+.fake-cursor3 {
+    width: 15px;
+    height: 23px;
+   
+    background-image: url('cursor_PNG102.png');
+    background-size: 15px 23px; 
+    position: absolute;
+    pointer-events: none; /* Ensures the fake cursor doesn't interfere with real mouse events */
+}
+
+.fake-cursor4 {
+    width: 15px;
+    height: 23px;
+    
+    background-image: url('cursor_PNG102.png');
+    background-size: 15px 23px; 
+    position: absolute;
+    pointer-events: none; /* Ensures the fake cursor doesn't interfere with real mouse events */
+}

@@ -1,0 +1,259 @@
+*{
+	margin: 0px;
+}
+head {
+	padding:0px;
+	margin:0px;
+}
+
+header {
+	height:10vh;
+	background-color:rgb(0, 0, 0);
+	width:100%;
+	position: sticky;
+	text-align: center;
+}
+#navElement{
+	padding-left: 1em;
+	padding-right: 1em;
+}
+a{
+	color: white;
+}
+nav {
+	display:flex;
+	padding-left:0.5em;
+	padding-right:1em;
+	padding-top:0.5em;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+}
+footer {
+	background-color: black;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+}
+
+
+
+.time {
+    font-size: 58px; /* Increase the font size for the time */
+    font-family: "Digital", sans-serif; /* Use a digital-style font if available */
+    color: #fff; /* Green color commonly used for digital clocks */
+}
+
+body {
+    background: linear-gradient(to bottom, #ffcc00, #ff6600); /* Gradient colors go from yellow to orange */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Make the body take up the full viewport height */
+
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+body.flipped {
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
+  
+body.flipped * {
+    transform: rotate(-180deg);
+    transform-origin: center center;
+  }
+
+  
+  
+
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: rgba(61, 231, 19, 0.7); /* Slightly more transparent */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #3BE713; /* Green border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    transition: background-color 0.3s; /* Smooth background color transition */
+    cursor: pointer;
+  }
+  
+  .rectangle:hover {
+    background-color: rgba(57, 206, 17, 0.8); /* Slightly different color on hover */
+  }
+  
+
+.particle {
+    position: absolute;
+    background-color: #FF5733;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.button {
+    background: #2D4059;
+    color: #F6F1D1;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .button:hover {
+    background: #F6F1D1;
+    color: #2D4059;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button:active {
+    transform: translateX(0); 
+  }
+  
+  @keyframes buttonPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .button:hover {
+    animation: buttonPulse 1s ease infinite;
+  }
+
+/* Enable the clock styles */
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+}
+
+/* Adjust margins and paddings as needed */
+/* Change the layout to display setup and punchline vertically */
+.joke-container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column; /* Change the flex direction to column */
+    text-align: center;
+    align-items: flex-start; /* Vertically align elements within the container */
+    min-height: 200px;
+}
+
+/* Add styles for the columns */
+.column {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.left {
+    text-align: left;
+    margin-right: 20px; /* Adjust margin to create space between columns */
+}
+
+.right {
+    text-align: left;
+    margin-right: 20px; /* Adjust margin to create space between columns */
+}
+
+/* Change the font color to white and increase the font size for the text */
+#setup, #punchline {
+    font-size: 48px; /* Increase the font size */
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color: #fff; /* Change the font color to white */
+}
+
+.dog-button {
+    background-color:#2D4059; /* Light orange color, can be customized */
+    border: none;
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+
+    position: absolute;
+    top: 600px; /* Adjust this value for vertical positioning */
+    right: 615px; /* Adjust this value for horizontal positioning */
+}
+
+#imageContainer {
+    position: absolute;
+    display: none; /* Hide the container initially */
+    text-align: right; /* Center the image horizontally 
+    /*margin-top: 10px;  Add spacing between the button and image */
+    margin-right: 50px;
+    top: 100px;
+    right: 50px;
+    
+
+}
+
+.dog-button:hover {
+    background: #F6F1D1;
+    color: #2D4059;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dog-button:active {
+    transform: translateX(0); 
+  }
+  
+  @keyframes buttonPulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .dog-button:hover {
+    animation: buttonPulse 1s ease infinite;
+  }
+
